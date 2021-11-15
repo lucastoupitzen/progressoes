@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de PA e PG</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="geometrica.js"></script>
+    <script src="direcionador2.js"></script>
+</head>
+<body onload = "direcionador()">
+    <section>
+    <h1>CALCULADORA DE PG's</h1>
+    <hr>
+    <p>Nessa página você deve fornecer os dados que possui e também o que deseja saber sobre a sua sequência.</p>
+    <p>Não é necessário preencher todos os campos da página. Basta fornecer alguns dados para que o cálculo seja executado.</p>
+    <hr>
+        <h2>Insira seus dados</h2>
+        <p>O primeiro termo da sequência: <input type="number" placeholder="Digite um número" name="primeiroTermo" id="primeiroTermo"></p>
+        <p>Um termo qualquer da sequência: <img id="info"src="imagens/INFO.png" alt="info"></p>
+            <p>
+                Posição do termo (número inteiro): <input type="number" placeholder="Digite um número"  name="posicaoTermo" id="posicaoTermo">
+                Valor: <input type="number" placeholder="Digite um número" name="valorTermo" id="valorTermo">
+        </p>
+        <p>Quantidade de termos: <input type="number" placeholder="Digite um número" name="quantiTermos" id="quantiTermos"></p>
+        <p>Razão da progressão: <input type="number" placeholder="Digite um número" name="razao" id="razao"></p>
+        <p>Soma dos termos: <input type="number" placeholder="Digite um número"  name="somaTermos" id="somaTermos"></p>
+        <div>
+            <hr>
+            <h2>Selecione o que deseja saber sobre sua Progressão Geométrica</h2>
+            <select name="metodos" id="metodos">
+                <option value="visualizar">Visualizar toda a sequência</option>
+                <option value="soma">Soma dos termos</option>
+                <option value="termo">Descobrir termo em uma posição</option>
+            </select>
+            <input type="button" value="Calcular..." id= "calcular" onclick="dialogo()">
+        </div>
+        <div id="saida"></div>
+        <div id="saida2"></div>
+        <div id="teste"></div>
+        <div id="output">Aguardando a seleção de dados...</div>
+        <img id="voltar" src="imagens/novasetavoltar.png" alt="voltar">
+    </section>
+    <div id="fundo" class="fundo">
+        <div id="pop-up" class="pop-up">
+            <button id="fechar" class="fechar">X</button>
+            <p><img src="imagens/INFO.png" alt="info"></p>
+            <span>Caso um de seus dados seja um termo da progressão diferente do termo inicial, é necessário informar a posição que ele ocupa e seu respectivo valor. 
+            Exemplo: Em (1,6,11,16), caso deseje passar o termo 11 como um dado para o cálculo, a caixa para posição recebe 3 e o valor 11.
+            </span>
+        </div>
+    </div>
+</body>
+<script>
+    function modal() {
+        const modal = document.getElementById("fundo")
+        modal.classList.add('mostrar')
+    }
+    const imagemInfo = document.getElementById("info")
+    imagemInfo.addEventListener('click',modal)
+    function close() {
+        const modal = document.getElementById("fundo")
+        modal.classList.remove("mostrar")
+    }
+    const tchau = document.getElementById("fechar")
+    tchau.addEventListener('click',close)   
+</script>
+</html>
