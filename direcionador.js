@@ -6,10 +6,10 @@ function direcionador() {
     direcionadorPG.addEventListener('click',clicarPG)
     voltar.addEventListener('click',volta)
     function clicarPA() {
-        window.location = "file:///Users/lucasferracin/Programação/progressoes/progre_pa.html"
+        window.location = "https://lucastoupitzen.github.io/progressoes/progre_pa.html"
     }
     function clicarPG() {
-        window.location = "file:///Users/lucasferracin/Programação/progressoes/progre_pg.html"
+        window.location = "https://lucastoupitzen.github.io/progressoes/progre_pg.html"
     }
     function volta() {
         window.location = "file:///Users/lucasferracin/Programação/progressoes/index.html"
