@@ -21,6 +21,7 @@ body {
 section {
     background-color: var(--cor3);
     max-width: 900px;
+    min-width: 350px;
     min-height: 300px;
     margin: auto;
     text-align: center;
