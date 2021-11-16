@@ -67,7 +67,7 @@ function apontaTermos(primeiroTermo,termoQualquer,quantiTermos,razao,somaTermos,
         for (i = 0; i < lista.length; i++) {
             if (lista[i].length != 0) {
                 lista_final.index.push(1)
-                lista_final.valores.push(Number(lista[i]))
+                lista_final.valores.push(lista[i])
             } else {
                 lista_final.index.push(0)
                 lista_final.valores.push(0)
@@ -77,7 +77,7 @@ function apontaTermos(primeiroTermo,termoQualquer,quantiTermos,razao,somaTermos,
         for (i = 0; i < lista.length - 1; i++) {
             if (lista[i].length != 0) {
                 lista_final.index.push(1)
-                lista_final.valores.push(Number(lista[i]))
+                lista_final.valores.push(lista[i])
             } else {
                 lista_final.index.push(0)
                 lista_final.valores.push(0)
@@ -86,7 +86,7 @@ function apontaTermos(primeiroTermo,termoQualquer,quantiTermos,razao,somaTermos,
         lista_final.index.push(0)
         lista_final.valores.push(0)
     }
-    return [lista_final.index , lista_final.valores]
+    return [lista_final.index.map(Number) , lista_final.valores.map(Number)]
 }
 function arruma(apontaTermo,output,teste) {
     if (apontaTermo[0][5] == 0 && apontaTermo[0][1]==1) {
