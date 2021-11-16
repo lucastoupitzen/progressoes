@@ -207,7 +207,7 @@ function resolve(lista, metodo, output) {
             break
         case "soma":
             var soma = (2*lista[0] + (lista[5]-1)*lista[3])*(lista[5]/2)
-            if (soma != null && lista[4] == soma) {
+            if (soma != null && (lista[4] == soma || lista[4] == 0)) {
                 output.innerHTML = soma
             } else {
                 output.innerHTML = 'Não existe uma PA com essas propriedades.'
