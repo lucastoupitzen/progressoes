@@ -194,6 +194,7 @@ input#novoCalcular:hover {
     font-family: var(--fonteTitulo);
     cursor: pointer;
     font-size: 2em;
+    text-align: center;
 }
 .fundo.mostrar {
     display: flex;
