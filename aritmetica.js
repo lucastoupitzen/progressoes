@@ -204,7 +204,12 @@ function resolve(lista, metodo, output) {
             break
         case "soma":
             var soma = (2*lista[0] + (lista[5]-1)*lista[3])*(lista[5]/2)
-            output.innerHTML = soma
+            if (soma != null) {
+                output.innerHTML = soma
+            } else {
+                output.innerHTML = 'Não existe uma PA com essas propriedades.'
+            }
+            
             break
         case "termo":
             var saida = document.getElementById("saida")
