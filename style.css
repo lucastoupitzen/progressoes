@@ -210,3 +210,6 @@ span {
     color: var(--cor2);
     font-size: 1.2em;
 }
+.just {
+    text-align: justify;
+}
