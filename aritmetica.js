@@ -195,10 +195,15 @@ function resolve(lista, metodo, output) {
                 }
             }
             var texto = ''
-            for (i in pa_completa) {
-                texto += pa_completa[i]
+            pa_completa.forEach(function(num) {
+                texto += num
                 texto += ", "
-            }
+            }) 
+                
+            // for (i in pa_completa) {
+            //     texto += pa_completa[i]
+            //     texto += ", "
+            // }
             output.innerHTML = `A progressão é: ${texto.substring(0,texto.length - 2)}`
             }
             break
