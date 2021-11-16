@@ -44,7 +44,7 @@ function verificador(primeiroTermo,termoQualquer,quantiTermos,razao,somaTermos,o
                 contador++
             } 
         }
-        if (contador == 3){
+        if (contador >= 3){
             return true
         } else {
             output.innerHTML = `É necessário fornecer mais ${3-contador} dado(s)`
@@ -180,7 +180,10 @@ function bhaskara(r,a1,soma,output) {
 function resolve(lista, metodo, output) {
     switch (metodo) {
         case "visualizar": 
+            var soma = (2*lista[0] + (lista[5]-1)*lista[3])*(lista[5]/2)
             if (lista[5] == null){
+                output.innerHTML = 'Não existe uma PA com essas propriedades.'
+            } else if (lista[4] != 0 && soma != lista[4]) {
                 output.innerHTML = 'Não existe uma PA com essas propriedades.'
             } else {
                 pa_completa = []
@@ -189,27 +192,22 @@ function resolve(lista, metodo, output) {
                     pa_completa.push(valor)
                     valor += lista[3]
                 }
-            for (i in pa_completa) {
-                if ((Math.round(pa_completa[i]) > pa_completa[i] && pa_completa[i] > (Math.round(pa_completa[i]) - 0.00000001)) || (Math.round(pa_completa[i]) < pa_completa[i] && pa_completa[i] < (Math.round(pa_completa[i]) + 0.00000001))) {
-                    pa_completa[i] = Math.round(pa_completa[i])
+                for (i in pa_completa) {
+                    if ((Math.round(pa_completa[i]) > pa_completa[i] && pa_completa[i] > (Math.round(pa_completa[i]) - 0.00000001)) || (Math.round(pa_completa[i]) < pa_completa[i] && pa_completa[i] < (Math.round(pa_completa[i]) + 0.00000001))) {
+                        pa_completa[i] = Math.round(pa_completa[i])
+                    }
                 }
-            }
-            var texto = ''
-            pa_completa.forEach(function(num) {
-                texto += num
-                texto += ", "
-            }) 
-                
-            // for (i in pa_completa) {
-            //     texto += pa_completa[i]
-            //     texto += ", "
-            // }
-            output.innerHTML = `A progressão é: ${texto.substring(0,texto.length - 2)}`
+                var texto = ''
+                pa_completa.forEach(function(num) {
+                    texto += num
+                    texto += ", "
+                }) 
+                output.innerHTML = `A progressão é: ${texto.substring(0,texto.length - 2)}`
             }
             break
         case "soma":
             var soma = (2*lista[0] + (lista[5]-1)*lista[3])*(lista[5]/2)
-            if (soma != null) {
+            if (soma != null && lista[4] == soma) {
                 output.innerHTML = soma
             } else {
                 output.innerHTML = 'Não existe uma PA com essas propriedades.'
