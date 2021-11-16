@@ -24,7 +24,7 @@ section {
     min-width: 300px;
     min-height: 300px;
     margin: auto;
-    text-align: center;
+    text-align: left;
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -34,12 +34,14 @@ h1 {
     font-family: "titulo";
     font-size: 3em;
     color: var(--cor1);
+    text-align: center;
 }
 h1#pages {
     padding: 0px;
     font-family: "titulo";
     font-size: 4em;
     color: var(--cor1);
+    text-align: center;
 }
 p {
     font-size: 1.7em;
@@ -59,6 +61,7 @@ div#direcionador {
     font-size: 4em;
     font-family: var(--fonteTitulo);
     border-width: 10px;
+    text-align: center;
 }
 div#direcionador > div#PA {
     display: inline-block;
@@ -71,6 +74,7 @@ div#direcionador > div#PA {
     border-color: var(--cor2);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.33);
     cursor: pointer;
+    text-align: center;
     
 }
 div#direcionador > div#PG {
@@ -84,6 +88,7 @@ div#direcionador > div#PG {
     border-color: var(--cor2);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.33);
     cursor: pointer;
+    text-align: center;
 }
 img {
     padding: 5px;
@@ -103,6 +108,7 @@ h2 {
     font-size: 2em;
     color: var(--cor2);
     font-weight: bolder;
+    text-align: center;
 }
 select {
     font-size: 1.7em;
@@ -112,6 +118,7 @@ select {
     margin-bottom: 10px;
     border: 2px solid var(--cor4);
     width: 330px;
+    text-align: center;
 }
 input#calcular {
     font-size: 1.5em;
