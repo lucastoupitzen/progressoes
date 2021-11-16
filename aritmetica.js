@@ -59,8 +59,8 @@ function apontaTermos(primeiroTermo,termoQualquer,quantiTermos,razao,somaTermos,
     // retorna uma lista de 0 e 1 seguindo uma ordem que servirá de controle
     var lista = [primeiroTermo,termoQualquer[0],termoQualquer[1],razao,somaTermos,quantiTermos,valorQualquer]
     var lista_final = {
-        "index" : [],
-        "valores" : []
+        index : [],
+        valores : []
     }
     if (lista[6] != null) {
         lista[6] = lista[6].value
