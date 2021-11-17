@@ -202,7 +202,11 @@ function resolve(lista, metodo, output) {
                     texto += num
                     texto += ", "
                 }) 
-                output.innerHTML = `A progressão é: ${texto.substring(0,texto.length - 2)}`
+                if (lista[1] != 0 && pa_completa[lista[1] - 1] != lista[2]) {
+                    output.innerHTML = 'Não existe uma PA com essas propriedades.'
+                } else {
+                    output.innerHTML = `A progressão é: ${texto.substring(0,texto.length - 2)}`
+                }
             }
             break
         case "soma":
